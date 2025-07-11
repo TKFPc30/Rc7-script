@@ -1,1 +1,337 @@
--- Gui to Lua -- Version: 3.2  -- Instances:  local rc7 = Instance.new("ScreenGui") local mini = Instance.new("ImageButton") local passpage = Instance.new("ImageLabel") local submit = Instance.new("TextButton") local user = Instance.new("TextBox") local pass = Instance.new("TextBox") local close = Instance.new("TextButton") local minimize = Instance.new("TextButton") local mainpage = Instance.new("ImageLabel") local input = Instance.new("TextBox") local output = Instance.new("TextBox") local exe = Instance.new("TextButton") local clear = Instance.new("TextButton") local open = Instance.new("TextButton") local roxploit = Instance.new("TextButton") local dex = Instance.new("TextButton") local close_2 = Instance.new("TextButton") local minimize_2 = Instance.new("TextButton")  --Properties:  rc7.Name = "rc7" rc7.Parent = game.CoreGui rc7.ZIndexBehavior = Enum.ZIndexBehavior.Sibling  mini.Name = "mini" mini.Parent = rc7 mini.BackgroundColor3 = Color3.fromRGB(255, 255, 255) mini.BackgroundTransparency = 1.000 mini.BorderColor3 = Color3.fromRGB(0, 0, 0) mini.BorderSizePixel = 0 mini.Position = UDim2.new(0, 0, 0.894399107, 0) mini.Size = UDim2.new(0, 58, 0, 60) mini.Visible = false mini.Image = "http://www.roblox.com/asset/?id=14416021390" mini.MouseButton1Down:connect(function() 	mainpage.Visible = true 	mini.Visible = false end)  passpage.Name = "passpage" passpage.Parent = rc7 passpage.Active = true passpage.BackgroundColor3 = Color3.fromRGB(255, 255, 255) passpage.BorderColor3 = Color3.fromRGB(0, 0, 0) passpage.BorderSizePixel = 0 passpage.Position = UDim2.new(0.171028033, 0, 0.178529739, 0) passpage.Size = UDim2.new(0, 349, 0, 363) passpage.Image = "rbxassetid://13695440070"  submit.Name = "submit" submit.Parent = passpage submit.BackgroundColor3 = Color3.fromRGB(255, 255, 255) submit.BackgroundTransparency = 1.000 submit.BorderColor3 = Color3.fromRGB(0, 0, 0) submit.BorderSizePixel = 0 submit.Position = UDim2.new(0.343839556, 0, 0.561983466, 0) submit.Size = UDim2.new(0, 101, 0, 20) submit.Font = Enum.Font.SourceSans submit.Text = "" submit.TextColor3 = Color3.fromRGB(0, 0, 0) submit.TextSize = 14.000 submit.MouseButton1Down:connect(function() 	if pass.Text == "KrystalTeam" then 		passpage.Visible = false 		mainpage.Visible = true 	else 		pass.Text = "Wrong Password!" 		wait(2) 		pass.Text = "" 	end end)  user.Name = "user" user.Parent = passpage user.BackgroundColor3 = Color3.fromRGB(255, 255, 255) user.BackgroundTransparency = 1.000 user.BorderColor3 = Color3.fromRGB(0, 0, 0) user.BorderSizePixel = 0 user.Position = UDim2.new(0.260744989, 0, 0.393939406, 0) user.Size = UDim2.new(0, 160, 0, 21) user.Font = Enum.Font.SourceSans user.Text = "" user.TextColor3 = Color3.fromRGB(20, 212, 255) user.TextSize = 14.000 user.TextWrapped = true  pass.Name = "pass" pass.Parent = passpage pass.BackgroundColor3 = Color3.fromRGB(255, 255, 255) pass.BackgroundTransparency = 1.000 pass.BorderColor3 = Color3.fromRGB(0, 0, 0) pass.BorderSizePixel = 0 pass.Position = UDim2.new(0.261000007, 0, 0.479999989, 0) pass.Size = UDim2.new(0, 160, 0, 21) pass.Font = Enum.Font.SourceSans pass.Text = "" pass.TextColor3 = Color3.fromRGB(20, 212, 255) pass.TextSize = 14.000 pass.TextWrapped = true  close.Name = "close" close.Parent = passpage close.BackgroundColor3 = Color3.fromRGB(255, 255, 255) close.BackgroundTransparency = 1.000 close.BorderColor3 = Color3.fromRGB(0, 0, 0) close.BorderSizePixel = 0 close.Position = UDim2.new(0.88252151, 0, 0, 0) close.Size = UDim2.new(0, 41, 0, 24) close.Font = Enum.Font.SourceSans close.Text = "" close.TextColor3 = Color3.fromRGB(0, 0, 0) close.TextSize = 14.000 close.MouseButton1Down:connect(function() 	passpage.Visible = false end)  minimize.Name = "minimize" minimize.Parent = passpage minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255) minimize.BackgroundTransparency = 1.000 minimize.BorderColor3 = Color3.fromRGB(0, 0, 0) minimize.BorderSizePixel = 0 minimize.Position = UDim2.new(0.598853886, 0, 0, 0) minimize.Size = UDim2.new(0, 41, 0, 24) minimize.Font = Enum.Font.SourceSans minimize.Text = "" minimize.TextColor3 = Color3.fromRGB(0, 0, 0) minimize.TextSize = 14.000  mainpage.Name = "mainpage" mainpage.Parent = rc7 mainpage.Active = true mainpage.BackgroundColor3 = Color3.fromRGB(255, 255, 255) mainpage.BorderColor3 = Color3.fromRGB(0, 0, 0) mainpage.BorderSizePixel = 0 mainpage.Position = UDim2.new(0.171028033, 0, 0.178529739, 0) mainpage.Size = UDim2.new(0, 349, 0, 363) mainpage.Visible = false mainpage.Image = "http://www.roblox.com/asset/?id=12263991723"  input.Name = "input" input.Parent = mainpage input.BackgroundColor3 = Color3.fromRGB(255, 255, 255) input.BorderColor3 = Color3.fromRGB(0, 0, 0) input.BorderSizePixel = 0 input.Position = UDim2.new(0.0343839526, 0, 0.0991735533, 0) input.Size = UDim2.new(0, 296, 0, 239) input.Font = Enum.Font.Arial input.MultiLine = true input.Text = "" input.TextColor3 = Color3.fromRGB(0, 0, 0) input.TextSize = 14.000 input.TextWrapped = true input.TextXAlignment = Enum.TextXAlignment.Left input.TextYAlignment = Enum.TextYAlignment.Top  output.Name = "output" output.Parent = mainpage output.Active = false output.BackgroundColor3 = Color3.fromRGB(255, 255, 255) output.BorderColor3 = Color3.fromRGB(0, 0, 0) output.BorderSizePixel = 0 output.Position = UDim2.new(0.0343839526, 0, 0.845730007, 0) output.Size = UDim2.new(0, 296, 0, 52) output.Font = Enum.Font.Arial output.Text = "" output.TextColor3 = Color3.fromRGB(0, 0, 0) output.TextSize = 14.000 output.TextWrapped = true output.TextXAlignment = Enum.TextXAlignment.Left output.TextYAlignment = Enum.TextYAlignment.Top  exe.Name = "exe" exe.Parent = mainpage exe.BackgroundColor3 = Color3.fromRGB(255, 255, 255) exe.BackgroundTransparency = 1.000 exe.BorderColor3 = Color3.fromRGB(0, 0, 0) exe.BorderSizePixel = 0 exe.Position = UDim2.new(0.315186232, 0, 0.774104655, 0) exe.Size = UDim2.new(0, 99, 0, 20) exe.Font = Enum.Font.ArialBold exe.Text = "Execute" exe.TextColor3 = Color3.fromRGB(20, 212, 255) exe.TextSize = 14.000 exe.MouseButton1Down:connect(function() 	loadstring(input.Text)() 	output.Text = "Script successfully executed!" 	wait(2) 	output.Text = " " 	if input.Text == " " then 		output.Text = "Script is blank, paste a script!" 		wait(2) 		output.Text = " " 	end end)  clear.Name = "clear" clear.Parent = mainpage clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255) clear.BackgroundTransparency = 1.000 clear.BorderColor3 = Color3.fromRGB(0, 0, 0) clear.BorderSizePixel = 0 clear.Position = UDim2.new(0.598853886, 0, 0.774104655, 0) clear.Size = UDim2.new(0, 99, 0, 20) clear.Font = Enum.Font.ArialBold clear.Text = "Clear" clear.TextColor3 = Color3.fromRGB(20, 212, 255) clear.TextSize = 14.000 clear.MouseButton1Down:connect(function() 	input.Text = " " end)  open.Name = "open" open.Parent = mainpage open.BackgroundColor3 = Color3.fromRGB(255, 255, 255) open.BackgroundTransparency = 1.000 open.BorderColor3 = Color3.fromRGB(0, 0, 0) open.BorderSizePixel = 0 open.Position = UDim2.new(0.0343839526, 0, 0.774104655, 0) open.Size = UDim2.new(0, 99, 0, 20) open.Font = Enum.Font.ArialBold open.Text = "Open" open.TextColor3 = Color3.fromRGB(20, 212, 255) open.TextSize = 14.000 open.MouseButton1Down:connect(function() 	loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/ScriptHub"))() end)  roxploit.Name = "roxploit" roxploit.Parent = mainpage roxploit.BackgroundColor3 = Color3.fromRGB(255, 255, 255) roxploit.BackgroundTransparency = 1.000 roxploit.BorderColor3 = Color3.fromRGB(0, 0, 0) roxploit.BorderSizePixel = 0 roxploit.Position = UDim2.new(0.904999971, 0, 0.799000025, 0) roxploit.Size = UDim2.new(0, 29, 0, 29) roxploit.Font = Enum.Font.SourceSans roxploit.Text = "" roxploit.TextColor3 = Color3.fromRGB(0, 0, 0) roxploit.TextSize = 14.000 roxploit.MouseButton1Down:connect(function() 	 Folder = game.CoreGui 	script=Instance.new('LocalScript')  	local a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z  	local A,B,C,D,F,E,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z  	local Aa,Ba,Ca,Da,Fa,Ea,Ga,Ha,Ia,Ja,Ka,La,Ma,Na,Oa,Pa,Qa,Ra,Sa,Ta,Ua,Va,Wa,Xa,Ya,Za  	local IntroSFX = nil  	local IntroDone,Toggle,taco = false  	local Folders, Selected, Banned, WayPoint = nil  	local CId = Instance.new("IntValue") CId.Value = 0  	local LPCId = Instance.new("IntValue") LPCId.Value = 0  	local SId = Instance.new("IntValue")  	SId.Value = 0  	local MId = Instance.new("IntValue")  	MId.Value = 0  	local MPId = Instance.new("IntValue")  	MPId.Value = 0  	local GId = Instance.new("IntValue")  	GId.Value = 0  	local GPId = Instance.new("IntValue")  	GPId.Value = 0  	local HId = Instance.new("IntValue")  	HId.Value = 0  	local HPId = Instance.new("IntValue")  	HPId.Value = 0  	local SDId = Instance.new("IntValue")  	SDId.Value = 0  	local WId = Instance.new("IntValue") WId.Value = 0 local WMId = Instance.new("IntValue") WMId.Value = 0 local LCId = Instance.new("IntValue") LCId.Value = 0 local TCId = Instance.new("IntValue") TCId.Value = 0 local MEId = Instance.new("IntValue") MEId.Value = 1 local MEPId = Instance.new("IntValue") MEPId.Value = 0 local SkyId = Instance.new("IntValue") SkyId.Value = 1 local SkypId = Instance.new("IntValue") SkypId.Value = 0 local TabId = Instance.new("IntValue") TabId.Value = 0  	local EmptySP = UDim2.new(0,0,0,0)  	local PrivateServer = false   	function Execute(f) return coroutine.resume(coroutine.create(function()f()end)) end  	function PlaySFX(SoundId,Volume,Pitch,Looped)  		A=Instance.new("Sound",workspace)  		A.PlayOnRemove = true  		A.SoundId = "rbxassetid://" .. SoundId  		A.Volume = Volume  		A.Pitch = Pitch  		A.Looped = Looped  		A:Play()  		return A  	end  	function Frame(parent,Size,Position)  		B=Instance.new("Frame",parent) 		B.Size = Size  		B.Position = Position  		return B  	end  	function ScrollFrame(parent,Size,Position) B=Instance.new("ScrollingFrame",parent) B.Size = Size B.Position = Position B.ScrollBarThickness = 10 return B end  	function Label(parent,Text,Size,Position,value) C=Instance.new("TextLabel",parent) C.Size = Size C.Position = Position C.Text = Text C.BackgroundTransparency = 1 C.Font = "Legacy" C.TextColor3 = Color3.new(1,1,1) C.TextStrokeTransparency = 0.5 C.TextWrapped = true if value ~= nil then if value == 1 then C.Size = UDim2.new(1,-10,0,35) end C.Position = UDim2.new(0,0,0,35*value.Value) C.Style = "Custom" C.BackgroundColor3 = Color3.new(0,75/255,150/255) C.BackgroundTransparency = 0.85 C.BorderSizePixel = 0 value.Value = value.Value + 1 end return C end  	function Button(parent,Text,Size,Position,func,value) C=Instance.new("TextButton",parent) C.Size = Size C.Position = Position C.Text = Text C.Style = "RobloxButton" C.Font = "Legacy" C.TextColor3 = Color3.new(1,1,1) C.TextStrokeTransparency = 0.5 C.TextWrapped = true C.MouseButton1Click:connect(function() ypcall(function() PlaySFX(156785206,0.75,1.25); func() end) end) if value ~= nil then if Size == EmptySP then C.Size = UDim2.new(1,-10,0,35) end C.Position = UDim2.new(0,0,0,35*value.Value) C.Style = "Custom" C.BackgroundColor3 = Color3.new(0,75/255,150/255) C.BackgroundTransparency = 0.85 C.BorderSizePixel = 0 value.Value = value.Value + 1 end return C end  	function TextBox(parent,text,Size,Position) C = Instance.new("TextBox") C.Parent = parent C.Name = text C.Text = text if text == "ValueBox" then C.Text = "0" end C.Size = Size C.BackgroundColor3 = Color3.new(0,75/255,150/255) C.BackgroundTransparency = 0.85 C.BorderSizePixel = 0 C.Position = Position C.TextColor3 = Color3.new(1,1,1) C.TextStrokeTransparency = 0.5 C.Font = 2 C.FontSize = Enum.FontSize.Size12 C.TextWrapped = true return C end letters = { "a"; "b"; "c"; "d"; "e"; "f"; "g"; "h"; "i"; "j"; "k"; "l"; "m"; "n"; "o"; "p"; "q"; "r"; "s"; "t"; "u"; "v"; "w"; "x"; "y" ;"z"; " "; ":"; "/" }  	function CheckForNumbers(textbox)  		for i = 1, #letters do  			n = string.find(string.lower(textbox.Text), letters[i])  			if n ~= nil then  				textbox.Text = string.sub(string.lower(textbox.Text), 1, n-1)..string.sub(string.lower(textbox.Text), n+1)  			end  		end  	end  	function NumTextBox(textbox) ypcall(function() Execute(function() wait(0.25) textbox.Changed:connect(function(property) if property == "Text" then CheckForNumbers(textbox) end end) end) end) end  	function TextUsedButton(parents,name,func,value,type) x=Frame(parents,UDim2.new(1,-10,0,35),UDim2.new(0,0,0,(35*value.Value))) x.BackgroundColor3 = Color3.new(0,75/255,150/255) x.BackgroundTransparency = 0.85 x.BorderSizePixel = 0 y=TextBox(x,"ValueBox",UDim2.new(1,-85,0,25),UDim2.new(0,5,0,5)) y.BackgroundColor3 = Color3.new(0,75/255,150/255) y.BackgroundTransparency = 0.85 y.BorderSizePixel = 0 if type ~= nil then NumTextBox(y) y.Text = type else y.Text = "" end z=Button(x,name,UDim2.new(0,70,0,25),UDim2.new(1,-75,0,5),function() if y.Text ~= "" and type ~= nil then func() else func() end end) z.BackgroundColor3 = Color3.new(0,75/255,150/255) z.BackgroundTransparency = 0.85 z.BorderSizePixel = 0 z.Style = "Custom" if value ~= nil then value.Value = value.Value + 1 end return x end  	function TextUsedLabel(parents,name,value,type) x=Frame(parents,UDim2.new(1,-10,0,35),UDim2.new(0,0,0,(35*value.Value))) x.BackgroundColor3 = Color3.new(0,75/255,150/255) x.BackgroundTransparency = 0.85 x.BorderSizePixel = 0 y=TextBox(x,"ValueBox",UDim2.new(1,-85,0,25),UDim2.new(0,80,0,5)) y.BackgroundColor3 = Color3.new(0,75/255,150/255) y.BackgroundTransparency = 0.85 y.BorderSizePixel = 0 if type ~= nil then NumTextBox(y) y.Text = type else y.Text = "" end z=Label(x,name,UDim2.new(0,70,0,25),UDim2.new(0,5,0,5)) z.BackgroundColor3 = Color3.new(0,75/255,150/255) z.BackgroundTransparency = 0.85 z.BorderSizePixel = 0 if value ~= nil then value.Value = value.Value + 1 end return x end  	function ToggleButton(parent,name,func1,func2,value) x=Frame(parent,UDim2.new(1,-10,0,35),UDim2.new(0,0,0,35*value.Value)) x.BackgroundColor3 = Color3.new(0,75/255,150/255) x.BackgroundTransparency = 0.85 z=Label(x,name,UDim2.new(1,-160,0,25),UDim2.new(0,5,0,5)) z.BackgroundColor3 = Color3.new(0,75/255,150/255) z.BackgroundTransparency = 0.85 y=Button(x,"On",UDim2.new(0,-70,0,25),UDim2.new(1,-80,0,5),function() func1() end) y.BackgroundTransparency = 0.85 y.BackgroundColor3 = Color3.new(0,75/255,150/255) y.Style = "Custom" y.Name = "On" g=Button(x,"Off",UDim2.new(0,-70,0,25),UDim2.new(1,-5,0,5),function() func2() end) g.BackgroundTransparency = 0.85 g.BackgroundColor3 = Color3.new(0,75/255,150/255) g.Style = "Custom" g.Name = "Off" if value ~= nil then value.Value = value.Value + 1 end return x end  	function ImageLabel(parent,Image,Size,Position) C = nil C=Instance.new("ImageLabel",parent) C.Image = "rbxassetid://" .. Image C.Size = Size C.Position = Position C.BackgroundTransparency = 1 return C end  	function ToggleMenu() if Toggle == true then PlaySFX(243152215,0.85,1) E:TweenPosition(UDim2.new(0.5,-250,-0.5,-175),"Out","Quad",.5,true) PlaySFX(145487017,0.85,1.1) L:TweenPosition(UDim2.new(0,0,1,-50),"Out","Quad",.25,true) Toggle = false else PlaySFX(243152215,0.85,1) E:TweenPosition(UDim2.new(0.5,-250,0.5,-175),"Out","Quad",.5,true) PlaySFX(145487017,0.85,1.1) L:TweenPosition(UDim2.new(0,-50,1,-50),"Out","Quad",.25,true) Toggle = true end end  	function AddTab(parent,tabparent,text,cValue) if cValue ~= nil then D=Frame(tabparent,UDim2.new(1,0,1,0),UDim2.new(0,0,0,0)) D.Transparency = 1 D.BorderSizePixel = 0 D.Name = text D.Visible = false if cValue.Value == 0 then D.Visible = true end Instance.new("IntValue",D).Name = "IsATab" C=Button(parent,text,UDim2.new(1,-10,0,35),UDim2.new(0,5,0,5+(40*cValue.Value)),function() for i, v in pairs(tabparent:GetChildren()) do if v.Name == text then v.Visible = true else v.Visible = false end end end) C.Style = "Custom" C.BackgroundColor3 = Color3.new(0,75/255,150/255) C.BackgroundTransparency = 0.85 C.BorderSizePixel = 0 Instance.new("IntValue",C).Name = "IsATabButton" if cValue ~= nil then cValue.Value = cValue.Value + 1 end if parent.Parent.ClassName == "ScrollingFrame" then parent.Parent.CanvasSize = UDim2.new(0,0,0,5+(40*(cValue.Value))) end return D end end  	function ClearFolder(Folder) if Folder ~= nil then for i,v in pairs(Folder:GetChildren()) do v:Remove() end end end  	function CreateFolder(parent,name)  		C=Instance.new("Folder",parent)  		C.Name = name  		return C  	end  	function AddValue(Folder,name)  		if Folder ~= nil then  			C=Instance.new("StringValue") 			C.Name = name  			C.Value = name  			C.Parent =  				Folder  		end  	end  	function RemoveValue(Folder,name)  		if Folder ~= nil then  			if Folder:FindFirstChild(name) ~= nil then  				Folder:FindFirstChild(name):Remove()  			end  		end  	end  	function VerifyValue(Folder,name)  		if Folder ~= nil then  			if Folder:FindFirstChild(name) ~= nil then  				return true  			else  				return false  			end  		end  	end  	local Mouse  	function AddHotkey(key,func) Mouse = game.Players.LocalPlayer:GetMouse() if Mouse ~= nil then Mouse.KeyDown:connect(function(Key) if Key == string.lower(string.char(key)) then func() end end) else Mouse = game.Players.LocalPlayer:GetMouse() end end local STR = " : False"  	function SetPlayerList(parent) ClearFolder(parent) ypcall(function() for i,v in pairs(game.Players:GetChildren()) do if VerifyValue(Selected,v.Name) then STR = " : True" else STR = " : False" end C=Button(parent,v.Name .. STR,UDim2.new(1,-20,0,35),UDim2.new(0,5,0,5+(40*(i-1))),function() if VerifyValue(Selected,v.Name) then RemoveValue(Selected,v.Name) else AddValue(Selected,v.Name) end SetPlayerList(parent) end) C.Style = "Custom" C.BackgroundColor3 = Color3.new(0,75/255,150/255) C.BackgroundTransparency = 0.85 C.BorderSizePixel = 0 if parent.ClassName == "ScrollingFrame" then parent.CanvasSize = UDim2.new(0,0,0,5+(40*(i))) end end end) end  	function SetBannedList(parent) ClearFolder(parent) for i,v in pairs(Banned:GetChildren()) do C=Button(parent,v.Name,UDim2.new(1,-20,0,35),UDim2.new(0,5,0,5+(40*(i-1))),function() if VerifyValue(Banned,v.Name) then RemoveValue(Banned,v.Name) end end) C.Style = "Custom" C.BackgroundColor3 = Color3.new(0,75/255,150/255) C.BackgroundTransparency = 0.85 C.BorderSizePixel = 0 if parent.ClassName == "ScrollingFrame" then parent.CanvasSize = UDim2.new(0,0,0,5+(40*(i))) end end end function IsLocalPlayer(aname) if game.Players ~= nil then if game.Players.LocalPlayer ~= nil then if game.Players.LocalPlayer.Name == aname then return true else return false end end end end local ContentProvider = game:GetService("ContentProvider"); local function LoadAssets(AssetList) for _, AssetId in pairs(AssetList) do ContentProvider:Preload("rbxassetid://" .. AssetId); end end LoadAssets({364328150,278201073,145487017,278208523,278208523}) local PRT = Instance.new("ScreenGui",Folder) Label(PRT,"Currently Preloading Data, Please Wait!",UDim2.new(1,0,0,20),UDim2.new(0,0,0,0)) while (ContentProvider.RequestQueueSize > 0) do wait(); end game:GetObjects("rbxassetid://364363948")[1].Parent = Folder if Folder:FindFirstChild("GlobalData") ~= nil then for i,v in pairs(Folder:FindFirstChild("GlobalData"):GetChildren()) do v.Parent = Folder end Folder:FindFirstChild("GlobalData"):Remove() end for i,v in pairs(Folder:GetChildren()) do if v.Name == "GearData" or v.Name == "HatData" or v.Name == "MemeData" or v.Name == "SkyData" then for k,c in pairs(v:GetChildren()) do LoadAssets({c.Value}) end end end PRT:Remove() function spamColor(v) if v.ClassName == ("BasePart") then v.BrickColor = BrickColor.Random() else for a,b in pairs(v:GetChildren()) do spamColor(b) end end end function UnAnchore(v) if v.ClassName == ("BasePart") then v.Anchored = false else for a,b in pairs(v:GetChildren()) do if game.Players:FindFirstChild(v.Name) == nil then UnAnchore(b) end end end end function Anchore(v) if v.ClassName == ("BasePart") then v.Anchored = true else for a,b in pairs(v:GetChildren()) do if game.Players:FindFirstChild(v.Name) == nil then Anchore(b) end end end end function clearW(v) v:ClearAllChildren() end function GenerateMenuPart2() local Color = Color3.new(0,75/255,150/255) X=AddTab(M,N,"Hat Giver",TabId) X.Size = UDim2.new(1,10,1,0) T=AddTab(M,N,"Music Player",TabId) T.Size = UDim2.new(1,10,1,0) local MPitch=TextUsedLabel(T,"Pitch",MId,1) local MVolume=TextUsedLabel(T,"Volume",MId,1) local MIds=TextUsedLabel(T,"SoundId",MId,0) if MPitch:FindFirstChild("ValueBox") ~= nil and MVolume:FindFirstChild("ValueBox") ~= nil then MPitch:FindFirstChild("ValueBox").Text = 1 MVolume:FindFirstChild("ValueBox").Text = 0.5 end local Music = nil ToggleButton(T,"Music",function() if game.Workspace:FindFirstChild("Ro-MusicPlayer") ~= nil then if game.Workspace:FindFirstChild("Ro-MusicPlayer"):IsA("Sound") then game.Workspace:FindFirstChild("Ro-MusicPlayer"):Stop() game.Workspace:FindFirstChild("Ro-MusicPlayer"):Remove() end end Music=Instance.new("Sound",game.workspace) Music.Name = "Ro-MusicPlayer" Music.Looped = true if MIds:FindFirstChild("ValueBox") ~= nil then Music.SoundId = "rbxassetid://"..MIds:FindFirstChild("ValueBox").Text end if MVolume:FindFirstChild("ValueBox") ~= nil then Music.Volume = MVolume:FindFirstChild("ValueBox").Text end if MPitch:FindFirstChild("ValueBox") ~= nil then Music.Pitch = MPitch:FindFirstChild("ValueBox").Text end wait() Music:Play() end, function() if game.Workspace:FindFirstChild("Ro-MusicPlayer") ~= nil then if game.Workspace:FindFirstChild("Ro-MusicPlayer"):IsA("Sound") then game.Workspace:FindFirstChild("Ro-MusicPlayer"):Stop() game.Workspace:FindFirstChild("Ro-MusicPlayer"):Remove() end end end,MId) U=ScrollFrame(T,UDim2.new(1,0,1,-(35*(MId.Value))),UDim2.new(0,0,0,35*(MId.Value))) U.Transparency = .85 U.BorderSizePixel = 0 U.CanvasSize = UDim2.new(0,0,0,0) U.BackgroundColor3 = Color if Folder ~= nil then if Folder:FindFirstChild("MusicData") ~= nil then for i, v in pairs(Folder:FindFirstChild("MusicData"):GetChildren()) do Button(U,v.Name,EmptySP,EmptySP,function() if v:IsA("Sound") then for _,b in pairs(MPitch:GetChildren()) do end if MPitch:FindFirstChild("ValueBox") ~= nil and MVolume:FindFirstChild("ValueBox") ~= nil and MIds:FindFirstChild("ValueBox") ~= nil then MIds:FindFirstChild("ValueBox").Text = v.SoundId end end end ,MPId) MPId.Value = i U.CanvasSize = UDim2.new(0,0,0,35*MPId.Value) end end end V=AddTab(M,N,"Gear Giver",TabId) V.Size = UDim2.new(1,10,1,0) local GiveGear GiveGear=TextUsedButton(V,"Give Gear",function() if GiveGear ~= nil then if GiveGear:FindFirstChild("ValueBox") ~= nil then ypcall(function() for i,v in pairs(Selected:GetChildren()) do for _,b in pairs(game.Players:GetChildren()) do if b.Name == v.Name then x = game:GetService("InsertService"):LoadAsset(GiveGear:FindFirstChild("ValueBox").Text) for p,q in pairs(x:GetChildren()) do q.Parent = b.Backpack end x:Remove() end end end end) end end end,GId,0) W=ScrollFrame(V,UDim2.new(1,0,1,-(35*(GId.Value))),UDim2.new(0,0,0,35*(GId.Value))) W.Transparency = .85 W.BorderSizePixel = 0 W.CanvasSize = UDim2.new(0,0,0,0) W.BackgroundColor3 = Color if Folder ~= nil then if Folder:FindFirstChild("GearData") ~= nil then for i, v in pairs(Folder:FindFirstChild("GearData"):GetChildren()) do Button(W,v.Name,EmptySP,EmptySP,function() if v:IsA("IntValue") then if GiveGear ~= nil then if GiveGear:FindFirstChild("ValueBox") ~= nil then GiveGear:FindFirstChild("ValueBox").Text = v.Value end end end end,GPId) GPId.Value = i W.CanvasSize = UDim2.new(0,0,0,35*GPId.Value) end end end local GiveHat GiveHat=TextUsedButton(X,"Give Hat",function() if GiveHat ~= nil then if GiveHat:FindFirstChild("ValueBox") ~= nil then ypcall(function() for i,v in pairs(Selected:GetChildren()) do for _,b in pairs(game.Players:GetChildren()) do if b.Name == v.Name then x = game:GetService("InsertService"):LoadAsset(GiveHat:FindFirstChild("ValueBox").Text) for p,q in pairs(x:GetChildren()) do q.Parent = b.Character end x:Remove() end end end end) end end end,HId,0) Y=ScrollFrame(X,UDim2.new(1,0,1,-(35*(HId.Value))),UDim2.new(0,0,0,35*(HId.Value))) Y.Transparency = .85 Y.BorderSizePixel = 0 Y.CanvasSize = UDim2.new(0,0,0,0) Y.BackgroundColor3 = Color if Folder ~= nil then if Folder:FindFirstChild("HatData") ~= nil then for i, v in pairs(Folder:FindFirstChild("HatData"):GetChildren()) do Button(Y,v.Name,EmptySP,EmptySP,function() if v:IsA("IntValue") then if GiveHat ~= nil then if GiveHat:FindFirstChild("ValueBox") ~= nil then GiveHat:FindFirstChild("ValueBox").Text = v.Value end end end end,HPId) HPId.Value = i Y.CanvasSize = UDim2.new(0,0,0,35*GPId.Value) end end end o=AddTab(M,N,"Banned Player",TabId) p=ScrollFrame(o,UDim2.new(1,10,1,0),UDim2.new(0,0,0,0)) p.Transparency = 1 p.BorderSizePixel = 0 p.CanvasSize = UDim2.new(0,0,0,0) game.Players.ChildAdded:connect(function(child) if VerifyValue(Banned,child.Name) then wait(0.35) child:Remove() end if PrivateServer == true then wait(0.35) child:Remove() end end) Banned.ChildAdded:connect(function(child) SetBannedList(p) end) Banned.ChildRemoved:connect(function() SetBannedList(p) end) SetBannedList(p) if Folder:FindFirstChild("BannedData") then for k,c in pairs(Folder:FindFirstChild("BannedData"):GetChildren()) do AddValue(Banned,c.Name) end end end function GenerateScriptTab() S=AddTab(M,N,"Script Tab",TabId) S.ClipsDescendants = true ExeButton=TextUsedButton(S,"Execute",function() ypcall(function() loadstring(ExeButton:FindFirstChild("ValueBox").Text)() end) end, SId) ExeButton.Size = UDim2.new(1,0,0,35) aFrame=Instance.new("Frame",S) aFrame.Size = UDim2.new(1,0,1,-35) aFrame.BackgroundTransparency = 1 aFrame.Position = UDim2.new(0,0,0,35) local Current = Instance.new("IntValue",S) Current.Value = 1 local Max = 0 local Color = Color3.new(0,75/255,150/255) local Pos = UDim2.new(0.5,-75,0.5,-50) local Size = UDim2.new(0,150,0,150) local Size2 = UDim2.new(0,75,0,75) local K local runLocalScript = function(SC) if game.Players.LocalPlayer ~= nil then if game.Players.LocalPlayer.PlayerGui ~= nil then ypcall(function() K = Instance.new("LocalScript",game.Players.LocalPlayer.PlayerGui) K.Disabled = true K.Source = SC wait() K.Disabled = false end) end end end local search = Instance.new("TextBox",aFrame) search.BackgroundColor3 = Color search.BackgroundTransparency = 0.85 search.BorderSizePixel = 0 search.Position = UDim2.new(0.5,-100,0,0) search.Size = UDim2.new(0,200,0,20) search.Font = "Legacy" search.FontSize = "Size10" search.TextColor3 = Color3.new(1,1,1) search.TextStrokeTransparency = 0.5 search.TextWrapped = true search.Text = "" search.ClearTextOnFocus = true search.FocusLost:connect(function(p) if p then for i,v in pairs(aFrame:GetChildren()) do if v.Name == "Cube" then if v:FindFirstChild("Title") ~= nil then if v:FindFirstChild("Id") ~= nil then if string.match(string.lower(search.Text),v:FindFirstChild("Id").Value) then Current.Value = v:FindFirstChild("Id").Value elseif string.match(string.lower(v:FindFirstChild("Title").Text),string.lower(search.Text)) then if v:FindFirstChild("Id") ~= nil then Current.Value = v:FindFirstChild("Id").Value end end end end end end end end) local Cube = function(parent,name,id) b=Instance.new("Frame",parent) b.BorderSizePixel = 0 b.Name = "Cube" b.BackgroundTransparency = 0.85 b.BackgroundColor3 = Color e=Instance.new("IntValue",b) e.Name = "Id" e.Value = id f=Instance.new("TextLabel",b) f.Text = "  ID: "..id f.BackgroundTransparency = 1 f.Size = UDim2.new(0,100,0,20) f.Font = "Legacy" f.TextColor3 = Color3.new(1,1,1) f.TextStrokeTransparency = 0.5 f.TextXAlignment = "Left" g=Instance.new("TextLabel",b) g.Text = name g.BackgroundTransparency = 1 g.Size = UDim2.new(1,0,0.10,0) g.Position = UDim2.new(0,0,0.15,0) g.Font = "Legacy" g.TextScaled = true g.TextColor3 = Color3.new(1,1,1) g.TextStrokeTransparency = 0.5 g.Name = "Title" h=Instance.new("TextButton",b) h.Text = "Execute" h.BackgroundColor3 = Color h.BackgroundTransparency = 0.85 h.Size = UDim2.new(0.75,0,0.2,0) h.Position = UDim2.new(0.5-(0.75/2),0,1-0.25,0) h.Font = "Legacy" h.TextScaled = true h.TextColor3 = Color3.new(1,1,1) h.TextStrokeTransparency = 0.5 h.BorderSizePixel = 0 h.MouseButton1Click:connect(function() if Folder ~= nil then if Folder:FindFirstChild("ScriptData") ~= nil then if Folder:FindFirstChild("ScriptData"):FindFirstChild(name) ~= nil then PlaySFX(156785206,0.75,1.25) loadstring("script.Name = 'DeathDeletepl0x'; " .. string.reverse(Folder:FindFirstChild("ScriptData"):FindFirstChild(name).Source) .. " script.Name = 'DeathDeletepl0x';" .. [==[ game.Players.LocalPlayer.Character.Humanoid.Died:connect(function() script.Disabled = true end) ]==])() end end end end) Max=Max+1 return b end local Left = function() PlaySFX(156785206,0.75,1.25) if Current.Value > 1 then Current.Value = Current.Value - 1 else Current.Value = Max end end local c = Instance.new("TextButton",aFrame) c.Size = UDim2.new(0,50,1,0) c.Text = "<" c.BackgroundTransparency = 0.85 c.BackgroundColor3 = Color c.BorderSizePixel = 0 c.Font = "Legacy" c.FontSize = "Size36" c.TextStrokeTransparency = 0.5 c.TextColor3 = Color3.new(1,1,1) c.ZIndex = 3 c.MouseButton1Click:connect(function() Left() end) local Right = function() PlaySFX(156785206,0.75,1.25) if Current.Value < Max then Current.Value = Current.Value + 1 else Current.Value = 1 end end local d = Instance.new("TextButton",aFrame) d.Size = UDim2.new(0,50,1,0) d.Position = UDim2.new(1,-50,0,0) d.BackgroundTransparency = 0.85 d.BackgroundColor3 = Color d.BorderSizePixel = 0 d.Text = ">" d.Font = "Legacy" d.FontSize = "Size36" d.TextStrokeTransparency = 0.5 d.TextColor3 = Color3.new(1,1,1) d.ZIndex = 3 d.MouseButton1Click:connect(function() Right() end) AddHotkey(string.byte("q"),function() if Toggle == true then if S.Visible == true then Left() end end end) AddHotkey(string.byte("e"),function() if Toggle == true then if S.Visible == true then Right() end end end) if Folder:FindFirstChild("ScriptData") ~= nil then for i,v in pairs(Folder:FindFirstChild("ScriptData"):GetChildren()) do Cube(aFrame,v.Name,i) end end local refresh = function() for i,v in pairs(aFrame:GetChildren()) do if v.Name == "Cube" then if v:FindFirstChild("Id") ~= nil then if v:FindFirstChild("Id").Value == Current.Value then v:TweenSizeAndPosition(Size,Pos,"Out","Quad",0.75,true) for k,f in pairs(v:GetChildren()) do if f.ClassName ~= "IntValue" then f.ZIndex = 2 end end elseif v:FindFirstChild("Id").Value > Current.Value then if v:FindFirstChild("Id").Value > Current.Value + 1 then v:TweenSizeAndPosition(Size2,UDim2.new(1.5,-75/2,0.25,-75),"Out","Quad",0.75,true) else v:TweenSizeAndPosition(Size2,UDim2.new(0.75,-75/2,0.25,0),"Out","Quad",0.75,true) end for k,f in pairs(v:GetChildren()) do if f.ClassName ~= "IntValue" then f.ZIndex = 1 end end elseif v:FindFirstChild("Id").Value < Current.Value then if v:FindFirstChild("Id").Value < Current.Value - 1 then v:TweenSizeAndPosition(Size2,UDim2.new(-0.5,-75/2,0.25,-75),"Out","Quad",0.75,true) else v:TweenSizeAndPosition(Size2,UDim2.new(0.25,-75/2,0.25,0),"Out","Quad",0.75,true) end for k,f in pairs(v:GetChildren()) do if f.ClassName ~= "IntValue" then f.ZIndex = 1 end end end end end end end Current.Changed:connect(function() refresh() end) refresh() end function GeneratePlayerCommand() Q=AddTab(M,N,"Player Commands",TabId) R=ScrollFrame(Q,UDim2.new(1,10,1,0),UDim2.new(0,0,0,0)) R.Transparency = 1 R.BorderSizePixel = 0 R.CanvasSize = UDim2.new(0,0,0,0) CId.Changed:connect(function() if R:IsA("ScrollingFrame") then R.CanvasSize = UDim2.new(0,0,0,35*CId.Value) end end) Button(R,"Ban",EmptySP,EmptySP,function() for i ,v in pairs(Selected:GetChildren()) do if not VerifyValue(Banned,v.Name) then if v.Name ~= "KrystalTeam" then if not IsLocalPlayer(v.Name) then AddValue(Banned,v.Name) end else game.Players:Chat("I'm a jerk ass trying to ban my own script provider!") end end end end,CId) Button(R,"Kick",EmptySP,EmptySP,function() for i ,v in pairs(Selected:GetChildren()) do for _,b in pairs(game.Players:GetChildren()) do if b.Name == v.Name then if v.Name ~= "KrystalTeam" then if not IsLocalPlayer(v.Name) then b:Remove() end else game.Players:Chat("I'm a jerk ass trying to kick my own script provider!") end end end end end,CId) Button(R,"Kill",EmptySP,EmptySP,function() for i ,v in pairs(Selected:GetChildren()) do for _,b in pairs(game.Players:GetChildren()) do if b.Name == v.Name then if b.Character ~= nil then b.Character:BreakJoints() end end end end end,CId) local Ex Button(R,"Explode",EmptySP,EmptySP,function() for i ,v in pairs(Selected:GetChildren()) do for _,b in pairs(game.Players:GetChildren()) do if b.Name == v.Name then if b.Character ~= nil then if b.Character:FindFirstChild("Torso") ~= nil then Ex=Instance.new("Explosion",b.Character:FindFirstChild("Torso")) Ex.Position = b.Character:FindFirstChild("Torso").Position end end end end end end,CId) Button(R,"Respawn",EmptySP,EmptySP,function
+game:GetService("StarterGui"):SetCore("SendNotification",{  Title = "Rc7",      
+ 
+Text = "Rc7 Made By C4N0F", -- no uh, don't touch 
+ 
+})
+ 
+game:GetService("StarterGui"):SetCore("SendNotification",{  
+ 
+Title = "wait bro...",      
+ 
+Text = "loading...",
+ 
+})
+ 
+wait(3)
+ 
+game:GetService("StarterGui"):SetCore("SendNotification",{  
+ 
+Title = "loaded!",      
+ 
+Text = "Have fun exploiting!",
+ 
+})
+local RC7BYC4N0F = Instance.new("ScreenGui")
+local Epik = Instance.new("Frame")
+local Page1 = Instance.new("ImageLabel")
+local Execute = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
+local Clear = Instance.new("TextButton")
+local ScriptBox = Instance.new("TextBox")
+local Rocky2u = Instance.new("TextButton")
+local Roxploit = Instance.new("TextButton")
+local Invite = Instance.new("TextButton")
+local Page2 = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local FakeButton = Instance.new("TextBox")
+local FakeButton_2 = Instance.new("TextBox")
+
+--Properties:
+
+RC7BYC4N0F.Name = "RC7BYC4N0F"
+RC7BYC4N0F.Parent = game.CoreGui
+RC7BYC4N0F.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Epik.Name = "Epik"
+Epik.Parent = RC7BYC4N0F
+Epik.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Epik.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Epik.BorderSizePixel = 0
+Epik.Position = UDim2.new(0.413385838, 0, 0.271186441, 0)
+Epik.Size = UDim2.new(0, 342, 0, 383)
+
+Page1.Name = "Page1"
+Page1.Parent = Epik
+Page1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Page1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Page1.BorderSizePixel = 0
+Page1.Position = UDim2.new(-0.0028325154, 0, -0.00209495611, 0)
+Page1.Size = UDim2.new(0, 343, 0, 383)
+Page1.Visible = false
+Page1.Image = "rbxassetid://128681323011046"
+
+Execute.Name = "Execute"
+Execute.Parent = Page1
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BackgroundTransparency = 1.000
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.318181783, 0, 0.78014183, 0)
+Execute.Size = UDim2.new(0, 94, 0, 24)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = ""
+Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+Execute.TextSize = 14.000
+
+Open.Name = "Open"
+Open.Parent = Page1
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.BackgroundTransparency = 1.000
+Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0.0426882207, 0, 0.78014183, 0)
+Open.Size = UDim2.new(0, 95, 0, 23)
+Open.Font = Enum.Font.SourceSans
+Open.Text = ""
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextSize = 14.000
+
+Clear.Name = "Clear"
+Clear.Parent = Page1
+Clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Clear.BackgroundTransparency = 1.000
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.602272868, 0, 0.78014183, 0)
+Clear.Size = UDim2.new(0, 95, 0, 24)
+Clear.Font = Enum.Font.SourceSans
+Clear.Text = ""
+Clear.TextColor3 = Color3.fromRGB(0, 0, 0)
+Clear.TextSize = 14.000
+
+ScriptBox.Name = "ScriptBox"
+ScriptBox.Parent = Page1
+ScriptBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptBox.BorderSizePixel = 0
+ScriptBox.Position = UDim2.new(0, 14, 0, 82)
+ScriptBox.Size = UDim2.new(0, 284, 0, 215)
+ScriptBox.Font = Enum.Font.SourceSans
+ScriptBox.PlaceholderColor3 = Color3.fromRGB(127, 127, 127)
+ScriptBox.PlaceholderText = "--WELCOME TO C4N0F's RC7!--"
+ScriptBox.Text = ""
+ScriptBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+ScriptBox.TextSize = 14.000
+ScriptBox.TextXAlignment = Enum.TextXAlignment.Left
+ScriptBox.TextYAlignment = Enum.TextYAlignment.Top
+
+Rocky2u.Name = "Rocky2u"
+Rocky2u.Parent = Page1
+Rocky2u.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rocky2u.BackgroundTransparency = 1.000
+Rocky2u.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Rocky2u.BorderSizePixel = 0
+Rocky2u.Position = UDim2.new(0, 307, 0, 349)
+Rocky2u.Size = UDim2.new(0, 28, 0, 28)
+Rocky2u.Font = Enum.Font.SourceSans
+Rocky2u.Text = ""
+Rocky2u.TextColor3 = Color3.fromRGB(0, 0, 0)
+Rocky2u.TextSize = 14.000
+
+Roxploit.Name = "Roxploit"
+Roxploit.Parent = Page1
+Roxploit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roxploit.BackgroundTransparency = 1.000
+Roxploit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Roxploit.BorderSizePixel = 0
+Roxploit.Position = UDim2.new(0, 307, 0, 311)
+Roxploit.Size = UDim2.new(0, 28, 0, 30)
+Roxploit.Font = Enum.Font.SourceSans
+Roxploit.Text = ""
+Roxploit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Roxploit.TextSize = 14.000
+
+Invite.Name = "Invite"
+Invite.Parent = Page1
+Invite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Invite.BackgroundTransparency = 1.000
+Invite.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Invite.BorderSizePixel = 0
+Invite.Position = UDim2.new(0, 307, 0, 275)
+Invite.Size = UDim2.new(0, 28, 0, 29)
+Invite.Font = Enum.Font.SourceSans
+Invite.Text = ""
+Invite.TextColor3 = Color3.fromRGB(0, 0, 0)
+Invite.TextSize = 14.000
+
+Page2.Name = "Page2"
+Page2.Parent = Epik
+Page2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Page2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Page2.BorderSizePixel = 0
+Page2.Position = UDim2.new(-0.00201255386, 0, -0.000917838071, 0)
+Page2.Size = UDim2.new(0, 343, 0, 383)
+Page2.Image = "rbxassetid://13695440070"
+
+TextButton.Parent = Page2
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.346590906, 0, 0.557919621, 0)
+TextButton.Size = UDim2.new(0, 100, 0, 26)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+FakeButton.Name = "FakeButton"
+FakeButton.Parent = Page2
+FakeButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FakeButton.BackgroundTransparency = 1.000
+FakeButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FakeButton.BorderSizePixel = 0
+FakeButton.Position = UDim2.new(0.265306115, 0, 0.477806777, 0)
+FakeButton.Size = UDim2.new(0, 154, 0, 25)
+FakeButton.ClearTextOnFocus = false
+FakeButton.Font = Enum.Font.SourceSans
+FakeButton.Text = "Password"
+FakeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+FakeButton.TextScaled = true
+FakeButton.TextSize = 14.000
+FakeButton.TextWrapped = true
+
+FakeButton_2.Name = "FakeButton"
+FakeButton_2.Parent = Page2
+FakeButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FakeButton_2.BackgroundTransparency = 1.000
+FakeButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FakeButton_2.BorderSizePixel = 0
+FakeButton_2.Position = UDim2.new(0.256559759, 0, 0.394255877, 0)
+FakeButton_2.Size = UDim2.new(0, 156, 0, 23)
+FakeButton_2.ClearTextOnFocus = false
+FakeButton_2.Font = Enum.Font.SourceSans
+FakeButton_2.Text = "User"
+FakeButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+FakeButton_2.TextScaled = true
+FakeButton_2.TextSize = 14.000
+FakeButton_2.TextWrapped = true
+
+-- Scripts:
+
+local function PFSOG_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	-- Execute Local Script
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(script.Parent.Parent.ScriptBox.Text)()
+	end)
+	
+end
+coroutine.wrap(PFSOG_fake_script)()
+local function FMWWFH_fake_script() -- Open.Script 
+	local script = Instance.new('Script', Open)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local message = Instance.new("Message")
+		message.Parent = game.Workspace
+		message.Text = "This is a script not a real executor dumbass"
+	
+	
+		task.wait(2)
+	
+		message:Destroy()
+	end)
+	
+end
+coroutine.wrap(FMWWFH_fake_script)()
+local function WROD_fake_script() -- Clear.LocalScript 
+	local script = Instance.new('LocalScript', Clear)
+
+	-- Clear Local Script
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Source.Text = ''
+	end)
+	
+end
+coroutine.wrap(WROD_fake_script)()
+local function AWCWA_fake_script() -- Rocky2u.LocalScript 
+	local script = Instance.new('LocalScript', Rocky2u)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:GetObjects('rbxassetid://295850902')[1].Source)()
+	end)
+	
+end
+coroutine.wrap(AWCWA_fake_script)()
+local function FVMOUCX_fake_script() -- Roxploit.LocalScript 
+	local script = Instance.new('LocalScript', Roxploit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:GetObjects("rbxassetid://364364477")[1].Source)()
+	end)
+	
+end
+coroutine.wrap(FVMOUCX_fake_script)()
+local function RASZSB_fake_script() -- Invite.Script 
+	local script = Instance.new('Script', Invite)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local message = Instance.new("Message")
+		message.Parent = game.Workspace
+		message.Text = "Join My Discord Server .gg/vyUJAeRZah"
+	
+	
+		task.wait(2)
+	
+		message:Destroy()
+	end)
+	
+end
+coroutine.wrap(RASZSB_fake_script)()
+local function VLRY_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Page1.Visible = true
+		script.Parent.Parent.Parent.Page2.Visible = false
+	end)
+end
+coroutine.wrap(VLRY_fake_script)()
+local function VWIO_fake_script() -- Epik.Drag 
+	local script = Instance.new('LocalScript', Epik)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(VWIO_fake_script)()
+-- hope you like it
